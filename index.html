@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Templates - Vara Prasad</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4285f4;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #4285f4;
+        }
+
+        .btn-yellow {
+            background: #ffc107;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #4285f4;
+        }
+
+        .hero p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 400px;
+            padding: 12px 20px;
+            border: 2px solid #eee;
+            border-radius: 30px 0 0 30px;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            background: #4285f4;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: #fff;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: #4285f4;
+            color: #4285f4;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .template-card {
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .template-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .template-preview {
+            height: 200px;
+            background: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .template-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .template-info {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .template-info h3 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .tag {
+            padding: 4px 12px;
+            border: 1px solid #4285f4;
+            color: #4285f4;
+            border-radius: 15px;
+            font-size: 0.75rem;
+        }
+
+        .template-links {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .template-links a {
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .template-links a:hover {
+            color: #4285f4;
+        }
+
+        .faq {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .faq h2 {
+            color: #4285f4;
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+        }
+
+        .faq p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box input {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">VP</div>
+        <nav>
+            <a href="#templates">My Work</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/Prasadchowdar" target="_blank"><i class="bi bi-github"></i></a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>HI, I'M VARA PRASAD<br><span>WEB DESIGNER & DEVELOPER</span></h1>
+        <p>I create stunning, conversion-focused websites for startups and businesses. <b>Here's some of my work.</b>
+        </p>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="search eg: app" onkeyup="filterTemplates()">
+            <button><i class="bi bi-search"></i></button>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+            <button class="filter-btn" onclick="filterByCategory('saas')">SaaS</button>
+            <button class="filter-btn" onclick="filterByCategory('apps')">Apps</button>
+            <button class="filter-btn" onclick="filterByCategory('portfolio')">Portfolio</button>
+            <button class="filter-btn" onclick="filterByCategory('restaurant')">Restaurant</button>
+            <button class="filter-btn" onclick="filterByCategory('law')">Law</button>
+            <button class="filter-btn" onclick="filterByCategory('realestate')">Real estate</button>
+            <button class="filter-btn" onclick="filterByCategory('others')">Others</button>
+        </div>
+    </section>
+
+    <section id="templates" class="container">
+        <div class="templates-grid" id="templatesGrid"></div>
+    </section>
+
+    <section id="contact" class="faq">
+        <h2>Let's Work Together</h2>
+        <p>Looking for a stunning website that converts visitors into customers? I specialize in creating modern,
+            responsive websites for startups, SaaS companies, and businesses.</p>
+        <h2>What I Offer</h2>
+        <p>✅ Custom Website Design & Development<br>
+            ✅ Landing Pages & SaaS Websites<br>
+            ✅ Responsive & Mobile-First Design<br>
+            ✅ Webflow, HTML/CSS, React Development</p>
+        <h2>Get In Touch</h2>
+        <p style="margin-bottom: 20px;">Ready to start your project? Contact me and let's discuss how I can help bring
+            your vision to life.</p>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="mailto:prasad@example.com"
+                style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #4285f4; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600;"><i
+                    class="bi bi-envelope-fill"></i> Email Me</a>
+            <a href="https://linkedin.com/in/prasadnadella" target="_blank"
+                style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #0077b5; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600;"><i
+                    class="bi bi-linkedin"></i> LinkedIn</a>
+            <a href="https://x.com/Prasad14068951" target="_blank"
+                style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #000; color: #fff; text-decoration: none; border-radius: 30px; font-weight: 600;"><i
+                    class="bi bi-twitter-x"></i> Twitter</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built with ❤️ by <a href="https://github.com/Prasadchowdar">Vara Prasad</a> | <a
+                href="https://x.com/Prasad14068951">Twitter</a> | <a
+                href="https://linkedin.com/in/prasadnadella">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        const templates = [
+            { name: "Pixa AI", category: "saas", img: "./src/saas/screenshots/pixa.png", url: "./src/saas/pixaai/" },
+            { name: "SaaSy Dark", category: "saas", img: "./src/saas/screenshots/saasydark.png", url: "./src/saas/SaaSyDark/" },
+            { name: "SaaS AI", category: "saas", img: "./src/saas/screenshots/ai-saas.png", url: "./src/saas/SaaS-AI/" },
+            { name: "Finance SaaS", category: "saas", img: "./src/saas/screenshots/finance.png", url: "./src/saas/finance/" },
+            { name: "Celestial SaaS", category: "saas", img: "./src/saas/screenshots/celestialsaas.png", url: "./src/saas/CelestialSaaS/" },
+            { name: "Navigator", category: "apps", img: "./src/apps/screenshots/navigator.png", url: "./src/apps/navigator/" },
+            { name: "Traveler", category: "apps", img: "./src/apps/screenshots/traveler.png", url: "./src/apps/traveler/" },
+            { name: "Chat Origin", category: "apps", img: "./src/apps/screenshots/chat-origin.png", url: "./src/apps/chatorigin/" },
+            { name: "AI Sales", category: "apps", img: "./src/apps/screenshots/aisales.png", url: "./src/apps/AISales/" },
+            { name: "Jamie Developer", category: "portfolio", img: "./src/portfolio/screenshots/jamie-dev-portfolio.png", url: "./src/portfolio/Jamie-portfolio/" },
+            { name: "JrDev Portfolio", category: "portfolio", img: "./src/portfolio/screenshots/dev.png", url: "./src/portfolio/jrdev/" },
+            { name: "Bella YouTuber", category: "portfolio", img: "./src/portfolio/screenshots/bella.png", url: "./src/portfolio/bella/" },
+            { name: "Notion Portfolio", category: "portfolio", img: "./src/portfolio/screenshots/notion.png", url: "./src/portfolio/notion/" },
+            { name: "Bistro Restaurant", category: "restaurant", img: "./src/restaurant/screenshots/bistro.png", url: "./src/restaurant/bistro/" },
+            { name: "Nutrio Restaurant", category: "restaurant", img: "./src/restaurant/screenshots/nutrio.png", url: "./src/restaurant/nutrio/" },
+            { name: "Law Fire", category: "law", img: "./src/law/screenshots/law-fire.png", url: "./src/law/lawfire/" },
+            { name: "Law Group", category: "law", img: "./src/law/screenshots/lawgroup.png", url: "./src/law/lawgroup/" },
+            { name: "Brick Property", category: "realestate", img: "./src/realestate/screenshots/brickstone.png", url: "./src/realestate/brickproperty/" },
+            { name: "Project Africa", category: "others", img: "./src/ngo/screenshots/project-africa.png", url: "./src/ngo/project-africa/" },
+            { name: "Car Wash", category: "others", img: "./src/others/screenshots/carwash.png", url: "./src/others/carwash/" }
+        ];
+
+        function renderTemplates(list) {
+            const grid = document.getElementById('templatesGrid');
+            grid.innerHTML = list.map(t => `
+                <div class="template-card" data-category="${t.category}" data-name="${t.name.toLowerCase()}">
+                    <a href="${t.url}" class="template-preview"><img src="${t.img}" alt="${t.name}" onerror="this.src='https://via.placeholder.com/400x200?text=${t.name}'"></a>
+                    <div class="template-info">
+                        <h3>${t.name}</h3>
+                        <span class="tag">${t.category}</span>
+                    </div>
+                    <div class="template-links">
+                        <a href="https://github.com/Prasadchowdar" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="${t.url}" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterByCategory(cat) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            renderTemplates(cat === 'all' ? templates : templates.filter(t => t.category === cat));
+        }
+
+        function filterTemplates() {
+            const query = document.getElementById('search').value.toLowerCase();
+            renderTemplates(templates.filter(t => t.name.toLowerCase().includes(query) || t.category.includes(query)));
+        }
+
+        renderTemplates(templates);
+    </script>
+</body>
+
+</html>
